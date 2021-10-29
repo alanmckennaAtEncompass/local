@@ -1,0 +1,14 @@
+{
+  "id": null,
+  "type": null,
+  "attributes": {
+    "callerReferenceId": "",
+    "serviceIdentifier": "",
+    "parameters": {
+      "companyIdentifier": "39220",
+      "page": "1"
+    },
+    "priorParameters": null,
+    "encryptedCredentials": null
+  }
+}
