@@ -1,11 +1,12 @@
 # !/usr/bin/env bash
 
-function setup_tmux() {
-  local current_working_dir
-  current_working_dir="$1"
+SCRIPT_DIR=`dirname -- "$0"`
+SCRIPT_DIR=`cd "${SCRIPT_DIR}" && pwd`
 
-  local_tmux_conf="${current_working_dir}/tmux/.tmux.conf"
-  user_tmux_conf=~/.tmux.conf
+
+function setup_tmux() {
+  local_tmux_conf="${SCRIPT_DIR}/.tmux.conf"
+  user_tmux_conf="${HOME}/tmux.conf"
 
   ln -sf ${local_tmux_conf} ${user_tmux_conf}
 }

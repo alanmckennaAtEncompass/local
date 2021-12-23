@@ -9,24 +9,8 @@ find "$(pwd)" -name setup.sh -print0 |
     source "$line"
   done
 
-function setup_vim() {
-  local current_working_dir
-  current_working_dir="$1"
-
-  local_vimrc="${current_working_dir}/vim/.vimrc"
-  user_vimrc=~/.vimrc
-
-  echo "source ${local_vimrc}" > ${user_vimrc}
-  
-  mkdir -p ~/.config/nvim
-  echo "source ${local_vimrc}" > ~/.config/nvim/init.vim
-  
-  vim -es -u ${user_vimrc} -i NONE -c "PlugInstall" -c "qa"
-}
-
-
-# setup_vim "${SCRIPT_DIR}"
-# setup_tmux "${SCRIPT_DIR}"
+# setup_vim 
+# setup_tmux
 # setup_git
 # setup_dsf "1.4.2" 
 # setup_glow "1.4.1"
@@ -35,3 +19,4 @@ function setup_vim() {
 # setup_maven
 # setup_wkhtmltopdf
 # setup_intellij
+# setup_nvm
