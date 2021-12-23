@@ -1,5 +1,7 @@
 # !/usr/bin/env bash
 
+apt install wget
+
 SCRIPT_DIR=`dirname -- "$0"`
 SCRIPT_DIR=`cd "${SCRIPT_DIR}" && pwd`
 
@@ -20,3 +22,4 @@ find "$(pwd)" -name setup.sh -print0 |
 # setup_wkhtmltopdf
 # setup_intellij
 # setup_nvm
+# setup_VcXsrv
